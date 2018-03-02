@@ -1,3 +1,0 @@
-com\weatherStation\App.class
-com\weatherStation\sensors\TemperatureSensorDS18B20.class
-com\weatherStation\restapi\RESTCall.class
