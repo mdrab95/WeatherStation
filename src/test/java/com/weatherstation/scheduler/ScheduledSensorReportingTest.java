@@ -46,7 +46,7 @@ public class ScheduledSensorReportingTest {
     void shouldCallSendDataOverRestMethodAndThrowNoException() throws Exception {
         String[] ds18b20Sensors = {"1", "2", "3", "4"};
         when(passwordDecrypter.decrypt("lbwOb4nrsmW7GZZ2tgdE4zfK28eSYIEi")).thenReturn("password");
-        when(ds18B20.getData(ds18b20Sensors, new double[] {0, 0, 0, 0}, w1Master)).thenReturn(new double[] {20.5, 19.5, 20, 50.5});
+        when(ds18B20.getData(ds18b20Sensors, new double[ds18b20Sensors.length], w1Master)).thenReturn(new double[] {20.5, 19.5, 20, 50.5});
         when(bme280.getData(i2CBus.getDevice(0x76), new byte[24], new byte[8]))
                 .thenReturn(new double[] {6.5, 980, 50});
         ScheduledSensorReporting scheduledSensorReporting = new ScheduledSensorReporting(passwordDecrypter,
