@@ -1,3 +1,4 @@
 # weatherStation
-Simple app for my weather station built from raspberry pi (3b) and some sensors (atm ds18b20 only).
-This app reads data from sensors then sends it to my thingspeak.com channel (this site allows you to create charts based on your data).
+Simple app for my weather station built on raspberry pi (3b).
+This app reads data from sensors (DS18B20 and BME280 are supported) and sends it to my thingspeak.com channel.
+https://mdrab95.ovh/stacja/
