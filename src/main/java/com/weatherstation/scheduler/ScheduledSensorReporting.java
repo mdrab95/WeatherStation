@@ -1,22 +1,22 @@
 package com.weatherstation.scheduler;
 
 import com.pi4j.io.i2c.I2CBus;
-import com.pi4j.io.i2c.I2CFactory;
 import com.pi4j.io.w1.W1Master;
-import com.weatherstation.rest.RestWrapper;
 import com.weatherstation.rest.RestCall;
+import com.weatherstation.rest.RestWrapper;
 import com.weatherstation.sensors.SensorBME280;
 import com.weatherstation.sensors.SensorDS18B20;
 import com.weatherstation.util.PasswordDecrypter;
-import org.jasypt.util.text.BasicTextEncryptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.util.TimerTask;
 
 public class ScheduledSensorReporting extends TimerTask {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(ScheduledSensorReporting.class);
+    private long delayInSeconds;
     private String decryptedPassword;
     private RestCall restCall;
     private PasswordDecrypter passwordDecrypter;
@@ -29,7 +29,7 @@ public class ScheduledSensorReporting extends TimerTask {
     private String[] ds18b20sensors;
 
     public ScheduledSensorReporting(PasswordDecrypter passwordDecrypter, String encryptedPassword, RestCall restCall, RestWrapper restWrapper,
-                                    SensorDS18B20 ds18B20, SensorBME280 bme280, I2CBus i2CBus, W1Master w1Master, String[] ds18b20sensors) {
+                                    SensorDS18B20 ds18B20, SensorBME280 bme280, I2CBus i2CBus, W1Master w1Master, String[] ds18b20sensors, long delayInSeconds) {
         this.passwordDecrypter = passwordDecrypter;
         this.restCall = restCall;
         this.restWrapper = restWrapper;
@@ -38,6 +38,7 @@ public class ScheduledSensorReporting extends TimerTask {
         this.bme280 = bme280;
         this.ds18b20sensors = ds18b20sensors;
         this.i2CBus = i2CBus;
+        this.delayInSeconds = delayInSeconds;
         decryptedPassword = passwordDecrypter.decrypt(encryptedPassword);
     }
 
@@ -62,7 +63,7 @@ public class ScheduledSensorReporting extends TimerTask {
             LOGGER.error(e.getMessage());
         }
         LOGGER.info("Sending data to thingspeak.com");
-        restWrapper.sendDataOverRest(ds18b20Data, bme280Data, decryptedPassword, restCall); // sends new request
+        restWrapper.sendDataOverRest(ds18b20Data, bme280Data, decryptedPassword, restCall, delayInSeconds); // sends new request
         System.out.println("--------------------------------------");
     }
 }

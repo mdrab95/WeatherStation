@@ -50,12 +50,12 @@ public class ScheduledSensorReportingTest {
         when(bme280.getData(i2CBus.getDevice(0x76), new byte[24], new byte[8]))
                 .thenReturn(new double[] {6.5, 980, 50});
         ScheduledSensorReporting scheduledSensorReporting = new ScheduledSensorReporting(passwordDecrypter,
-                "lbwOb4nrsmW7GZZ2tgdE4zfK28eSYIEi", restCall, restWrapper, ds18B20, bme280, i2CBus, w1Master, ds18b20Sensors);
+                "lbwOb4nrsmW7GZZ2tgdE4zfK28eSYIEi", restCall, restWrapper, ds18B20, bme280, i2CBus, w1Master, ds18b20Sensors, 1);
 
         scheduledSensorReporting.run();
 
         verify(restWrapper, times(1))
-                .sendDataOverRest(new double[] {20.5, 19.5, 20, 50.5}, new double[] {6.5, 980, 50}, "password", restCall);
+                .sendDataOverRest(new double[] {20.5, 19.5, 20, 50.5}, new double[] {6.5, 980, 50}, "password", restCall, 1);
         assertThatCode(scheduledSensorReporting::run).doesNotThrowAnyException();
     }
 }

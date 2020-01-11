@@ -29,7 +29,8 @@ public class WeatherstationApplication {
 		passwordDecrypter.initSaltAndPrepareBasicTextEncryptor(new Scanner(System.in));
 		Timer time = new Timer();
 		ScheduledSensorReporting ssr = new ScheduledSensorReporting(passwordDecrypter, ENCRYPTED_PASSWORD, new RestCall(),
-				new RestWrapper(), new SensorDS18B20(), new SensorBME280(), I2CFactory.getInstance(I2CBus.BUS_1), new W1Master(), DS18B20_SENSORS);
+				new RestWrapper(), new SensorDS18B20(), new SensorBME280(), I2CFactory.getInstance(I2CBus.BUS_1), new W1Master(), DS18B20_SENSORS,
+				DELAY_IN_SECONDS);
 		time.schedule(ssr, 0, DELAY_IN_SECONDS*1000); // new task every 5m (in milliseconds)
 	}
 

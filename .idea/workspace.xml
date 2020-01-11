@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7d590fe3-9c6a-4eca-a885-4f989c44b54e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/WeatherstationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/WeatherstationApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/sensors/SensorBME280.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/sensors/SensorBME280.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/sensors/SensorDS18B20.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/sensors/SensorDS18B20.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/rest/RestCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/rest/RestCall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/rest/RestWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/rest/RestWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/scheduler/ScheduledSensorReporting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/scheduler/ScheduledSensorReporting.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +146,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScheduledSensorReportingTest.runMethodTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weatherstation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.weatherstation.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.weatherstation.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.weatherstation.controller.MainControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainControllerTest.shouldReturnGeneralInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weatherstation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.weatherstation.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.weatherstation.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.weatherstation.controller.MainControllerTest" />
+      <option name="METHOD_NAME" value="shouldReturnGeneralInfo" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestWrapperTest.shouldCallPostMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weatherstation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.weatherstation.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.weatherstation.rest" />
+      <option name="MAIN_CLASS_NAME" value="com.weatherstation.rest.RestWrapperTest" />
+      <option name="METHOD_NAME" value="shouldCallPostMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScheduledSensorReportingTest.shouldCallSendDataOverRestMethodAndThrowNoException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weatherstation" />
       <extension name="coverage">
         <pattern>
@@ -154,58 +206,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.weatherstation.scheduler" />
       <option name="MAIN_CLASS_NAME" value="com.weatherstation.scheduler.ScheduledSensorReportingTest" />
-      <option name="METHOD_NAME" value="runMethodTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SensorBME280Test.shouldReturnCorrectData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="weatherstation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.weatherstation.sensors.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.weatherstation.sensors" />
-      <option name="MAIN_CLASS_NAME" value="com.weatherstation.sensors.SensorBME280Test" />
-      <option name="METHOD_NAME" value="shouldReturnCorrectData" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SensorDS18B20Test.shouldReturnCorrectTemperature" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="weatherstation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.weatherstation.sensors.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.weatherstation.sensors" />
-      <option name="MAIN_CLASS_NAME" value="com.weatherstation.sensors.SensorDS18B20Test" />
-      <option name="METHOD_NAME" value="shouldReturnCorrectTemperature" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SensorDS18B20Test.shouldReturnCorrectTemperaturesArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="weatherstation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.weatherstation.sensors.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.weatherstation.sensors" />
-      <option name="MAIN_CLASS_NAME" value="com.weatherstation.sensors.SensorDS18B20Test" />
-      <option name="METHOD_NAME" value="shouldReturnCorrectTemperaturesArray" />
+      <option name="METHOD_NAME" value="shouldCallSendDataOverRestMethodAndThrowNoException" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -289,19 +290,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in weatherstation" />
-      <item itemvalue="JUnit.ScheduledSensorReportingTest.runMethodTest" />
-      <item itemvalue="JUnit.SensorBME280Test.shouldReturnCorrectData" />
-      <item itemvalue="JUnit.SensorDS18B20Test.shouldReturnCorrectTemperaturesArray" />
-      <item itemvalue="JUnit.SensorDS18B20Test.shouldReturnCorrectTemperature" />
       <item itemvalue="Spring Boot.WeatherstationApplication" />
+      <item itemvalue="JUnit.MainControllerTest" />
+      <item itemvalue="JUnit.MainControllerTest.shouldReturnGeneralInfo" />
+      <item itemvalue="JUnit.RestWrapperTest.shouldCallPostMethod" />
+      <item itemvalue="JUnit.ScheduledSensorReportingTest.shouldCallSendDataOverRestMethodAndThrowNoException" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in weatherstation" />
-        <item itemvalue="JUnit.SensorDS18B20Test.shouldReturnCorrectTemperature" />
-        <item itemvalue="JUnit.SensorDS18B20Test.shouldReturnCorrectTemperaturesArray" />
-        <item itemvalue="JUnit.SensorBME280Test.shouldReturnCorrectData" />
-        <item itemvalue="JUnit.ScheduledSensorReportingTest.runMethodTest" />
+        <item itemvalue="JUnit.ScheduledSensorReportingTest.shouldCallSendDataOverRestMethodAndThrowNoException" />
+        <item itemvalue="JUnit.RestWrapperTest.shouldCallPostMethod" />
+        <item itemvalue="JUnit.MainControllerTest" />
+        <item itemvalue="JUnit.MainControllerTest.shouldReturnGeneralInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -345,7 +346,7 @@
       <workItem from="1578693715801" duration="9145000" />
       <workItem from="1578740767687" duration="3844000" />
       <workItem from="1578766018128" duration="639000" />
-      <workItem from="1578778836468" duration="1228000" />
+      <workItem from="1578778836468" duration="4289000" />
     </task>
     <servers />
   </component>
@@ -365,24 +366,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="571" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578589607668" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1578766657562">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1578786573259">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1578786573259" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578766657562" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578766369250" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1578766657562">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1578786573259">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1578786573259" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578766657562" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578766369249" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1578766657562">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1578786573258">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1578786573258" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578766657562" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578766369249" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1578766657562">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1578786573259">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1578786573259" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578766657562" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578766369249" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1578593179887">

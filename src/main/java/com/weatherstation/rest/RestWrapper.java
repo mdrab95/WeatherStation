@@ -12,8 +12,8 @@ public class RestWrapper {
      * @param ds18b20Data
      * @param bme280Data
      */
-    public void sendDataOverRest(double[] ds18b20Data, double[] bme280Data, String decryptedPassword, RestCall restCall) {
+    public void sendDataOverRest(double[] ds18b20Data, double[] bme280Data, String decryptedPassword, RestCall restCall, long delayInSeconds) {
         LOGGER.info("Sending new request.");
-        restCall.post(ds18b20Data, bme280Data, decryptedPassword);
+        restCall.post(ds18b20Data, bme280Data, decryptedPassword, delayInSeconds);
     }
 }

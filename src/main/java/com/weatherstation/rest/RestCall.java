@@ -13,7 +13,13 @@ import java.io.InputStream;
 public class RestCall {
     private static final Logger LOGGER = LoggerFactory.getLogger(RestCall.class);
 
-    public void post(double[] ds18b20Data, double[] bme280Data, String decryptedPassword) {
+    /**
+     * Post data to thingspeak.com
+     * @param ds18b20Data
+     * @param bme280Data
+     * @param decryptedPassword
+     */
+    void post(double[] ds18b20Data, double[] bme280Data, String decryptedPassword, long delayInSeconds) {
         Unirest.post("https://api.thingspeak.com/update.json")
                 .header("accept", "application/json")
                 .field("api_key", decryptedPassword) // api key
@@ -29,7 +35,7 @@ public class RestCall {
                         int code = response.getStatus();
                         JsonNode body = response.getBody();
                         InputStream rawBody = response.getRawBody();
-                        LOGGER.info(String.format("Success: %s %s %s. Next update in 30s ", code, body, rawBody));
+                        LOGGER.info(String.format("Success: %s %s %s. Next update in %d s. ", code, body, rawBody, delayInSeconds));
                     }
 
                     public void failed(UnirestException e) {
