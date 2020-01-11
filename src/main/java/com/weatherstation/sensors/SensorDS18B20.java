@@ -30,7 +30,7 @@ public class SensorDS18B20 {
             for (int i = 0; i < temperatureSensors.size(); i++) {
                 for (int j = 0; j < sensors.length; j++) {
                     if (temperatureSensors.get(i).getName().contains(sensors[j])) {
-                        setTemperatureByIndex(tempArray, temperatureSensors.get(i), sensors, i);
+                        setTemperatureByIndex(tempArray, temperatureSensors.get(i), sensors, j);
                     }
                 }
             }
