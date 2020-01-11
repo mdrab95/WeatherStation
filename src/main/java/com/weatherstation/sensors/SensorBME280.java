@@ -160,7 +160,7 @@ public class SensorBME280 {
             humidity = 0.0;
         }
 
-        cTemp = Math.round(cTemp*10)/10;
+        cTemp = Math.round(cTemp*10)/10d;
         pressure = (int) Math.round(pressure);
         humidity = (int) Math.round(humidity);
 

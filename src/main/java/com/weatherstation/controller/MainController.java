@@ -9,6 +9,11 @@ public class MainController {
     }
     @GetMapping("/")
     public String mainController(){
-        return "index";
+        return "<html><title>Stacja pogodowa - info</title><body>"
+                + "<h2>General information</h2>"
+                + "<p>Encrypt your thingspeak password with com.weatherstation.util.PasswordEncrypter</p>"
+                + "<p>Edit com.weatherstation.WeatherstationApplication - set your encrypted thingspeak password and list of sensors</p>"
+                + "<p>build project with mvn clean install command</p>"
+                + "</body></html>";
     }
 }

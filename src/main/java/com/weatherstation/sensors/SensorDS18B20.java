@@ -38,6 +38,13 @@ public class SensorDS18B20 {
         return tempArray;
     }
 
+    /**
+     * This method sets array of temperatures
+     * @param temperatures
+     * @param device
+     * @param sensors
+     * @param index
+     */
     void setTemperatureByIndex(double[] temperatures, TemperatureSensor device, String[] sensors, int index) {
         temperatures[index] = device.getTemperature(TemperatureScale.CELSIUS);
         LOGGER.info(String.format("Temperature from sensor [%s]: %.2f", sensors[index], temperatures[index]));
