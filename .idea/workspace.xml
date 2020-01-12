@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7d590fe3-9c6a-4eca-a885-4f989c44b54e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherStation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/WeatherstationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/WeatherstationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/rest/RestCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/rest/RestCall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/rest/RestWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/rest/RestWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weatherstation/scheduler/ScheduledSensorReporting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weatherstation/scheduler/ScheduledSensorReporting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/weatherstation/rest/RestWrapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/weatherstation/rest/RestWrapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,17 +291,17 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in weatherstation" />
-      <item itemvalue="Spring Boot.WeatherstationApplication" />
       <item itemvalue="JUnit.MainControllerTest" />
       <item itemvalue="JUnit.MainControllerTest.shouldReturnGeneralInfo" />
       <item itemvalue="JUnit.RestWrapperTest.shouldCallPostMethod" />
       <item itemvalue="JUnit.ScheduledSensorReportingTest.shouldCallSendDataOverRestMethodAndThrowNoException" />
+      <item itemvalue="Spring Boot.WeatherstationApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in weatherstation" />
-        <item itemvalue="JUnit.ScheduledSensorReportingTest.shouldCallSendDataOverRestMethodAndThrowNoException" />
         <item itemvalue="JUnit.RestWrapperTest.shouldCallPostMethod" />
+        <item itemvalue="JUnit.ScheduledSensorReportingTest.shouldCallSendDataOverRestMethodAndThrowNoException" />
         <item itemvalue="JUnit.MainControllerTest" />
         <item itemvalue="JUnit.MainControllerTest.shouldReturnGeneralInfo" />
       </list>
@@ -347,6 +348,7 @@
       <workItem from="1578740767687" duration="3844000" />
       <workItem from="1578766018128" duration="639000" />
       <workItem from="1578778836468" duration="4289000" />
+      <workItem from="1578854484366" duration="259000" />
     </task>
     <servers />
   </component>
@@ -410,12 +412,12 @@
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578093581965" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578593179887" />
-    <state x="-1264" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1578778836141">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1578854484437">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1264" y="345" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1578778836141" />
     <state x="-1264" y="345" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578766020412" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578693715549" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578854484437" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1578092963847">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -23,16 +23,17 @@ public class ScheduledSensorReporting extends TimerTask {
     private SensorDS18B20 ds18B20;
     private SensorBME280 bme280;
     private I2CBus i2CBus;
-
+    private String url;
     private RestWrapper restWrapper;
     private W1Master w1Master;
     private String[] ds18b20sensors;
 
-    public ScheduledSensorReporting(PasswordDecrypter passwordDecrypter, String encryptedPassword, RestCall restCall, RestWrapper restWrapper,
+    public void prepare (PasswordDecrypter passwordDecrypter, String encryptedPassword, RestCall restCall, RestWrapper restWrapper, String url,
                                     SensorDS18B20 ds18B20, SensorBME280 bme280, I2CBus i2CBus, W1Master w1Master, String[] ds18b20sensors, long delayInSeconds) {
         this.passwordDecrypter = passwordDecrypter;
         this.restCall = restCall;
         this.restWrapper = restWrapper;
+        this.url = url;
         this.w1Master = w1Master;
         this.ds18B20 = ds18B20;
         this.bme280 = bme280;
@@ -63,7 +64,7 @@ public class ScheduledSensorReporting extends TimerTask {
             LOGGER.error(e.getMessage());
         }
         LOGGER.info("Sending data to thingspeak.com");
-        restWrapper.sendDataOverRest(ds18b20Data, bme280Data, decryptedPassword, restCall, delayInSeconds); // sends new request
+        restWrapper.sendDataOverRest(url, ds18b20Data, bme280Data, decryptedPassword, restCall, delayInSeconds); // sends new request
         System.out.println("--------------------------------------");
     }
 }

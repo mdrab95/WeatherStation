@@ -36,7 +36,7 @@ public class PasswordDecrypterTest {
 
         passwordDecrypter.initSaltAndPrepareBasicTextEncryptor(scanner);
 
-        verify(basicTextEncryptor, times(1)).setPasswordCharArray("testKey".toCharArray());
+        verify(basicTextEncryptor).setPasswordCharArray("testKey".toCharArray());
     }
 
     @Test
@@ -47,7 +47,7 @@ public class PasswordDecrypterTest {
 
         passwordDecrypter.decrypt("password");
 
-        verify(basicTextEncryptor, times(1)).decrypt("password");
+        verify(basicTextEncryptor).decrypt("password");
     }
 
     @Test

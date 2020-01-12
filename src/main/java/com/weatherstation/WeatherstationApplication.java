@@ -23,14 +23,15 @@ public class WeatherstationApplication {
 	private static final String[] DS18B20_SENSORS = {}; // Insert your ds18b20 sensors' names here
 	private static final String ENCRYPTED_PASSWORD = ""; // Insert your encrypted password here (to generate it use PasswordEncrypter class
 	private static final long DELAY_IN_SECONDS = 300;
+	private static String URL = "https://api.thingspeak.com/update.json";
 	public static void main(String[] args) throws IOException, I2CFactory.UnsupportedBusNumberException {
 		SpringApplication.run(WeatherstationApplication.class, args);
 		PasswordDecrypter passwordDecrypter = new PasswordDecrypter(new BasicTextEncryptor());
 		passwordDecrypter.initSaltAndPrepareBasicTextEncryptor(new Scanner(System.in));
 		Timer time = new Timer();
-		ScheduledSensorReporting ssr = new ScheduledSensorReporting(passwordDecrypter, ENCRYPTED_PASSWORD, new RestCall(),
-				new RestWrapper(), new SensorDS18B20(), new SensorBME280(), I2CFactory.getInstance(I2CBus.BUS_1), new W1Master(), DS18B20_SENSORS,
-				DELAY_IN_SECONDS);
+		ScheduledSensorReporting ssr = new ScheduledSensorReporting();
+		ssr.prepare(passwordDecrypter, ENCRYPTED_PASSWORD, new RestCall(), new RestWrapper(), URL, new SensorDS18B20(),
+				new SensorBME280(), I2CFactory.getInstance(I2CBus.BUS_1), new W1Master(), DS18B20_SENSORS, DELAY_IN_SECONDS);
 		time.schedule(ssr, 0, DELAY_IN_SECONDS*1000); // new task every 5m (in milliseconds)
 	}
 

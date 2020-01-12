@@ -19,8 +19,8 @@ public class RestCall {
      * @param bme280Data
      * @param decryptedPassword
      */
-    void post(double[] ds18b20Data, double[] bme280Data, String decryptedPassword, long delayInSeconds) {
-        Unirest.post("https://api.thingspeak.com/update.json")
+    void post(String url, double[] ds18b20Data, double[] bme280Data, String decryptedPassword, long delayInSeconds) {
+        Unirest.post(url)
                 .header("accept", "application/json")
                 .field("api_key", decryptedPassword) // api key
                 .field("field1", ds18b20Data[0])
