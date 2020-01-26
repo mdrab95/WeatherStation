@@ -1,6 +1,5 @@
 package com.weatherstation.controller;
 
-import com.weatherstation.util.PasswordDecrypter;
 import org.jasypt.util.text.BasicTextEncryptor;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
